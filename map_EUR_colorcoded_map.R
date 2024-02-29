@@ -97,13 +97,13 @@ SHP_29 %>%
 # Second is < 0.002 (0.2%)
 # Third is < 0.006 (0.6%)
 # Fourth is <0.02 (20%)
-# Fifth is <0.8 (80%)
+# Fifth is <0.75 (75%)
 
 Bin1 <- 0.001
 Bin2 <- 0.002
 Bin3 <- 0.006
 Bin4 <- 0.02
-Bin5 <- 0.8
+Bin5 <- 0.75
 
 ## Make a label for this
 all_countries_info[Ratio < Bin1 & Ratio >= 0, bin := Bin1]
@@ -116,7 +116,7 @@ all_countries_info[bin == Bin1, name := "< 0.1%"]
 all_countries_info[bin == Bin2, name := "< 0.2%"]
 all_countries_info[bin == Bin3, name := "< 0.6%"]
 all_countries_info[bin == Bin4, name := "< 2%"]
-all_countries_info[bin == Bin5, name := "< 80%"]
+all_countries_info[bin == Bin5, name := "< 75%"]
 
 
 SHP_29 <- SHP_0 %>% 
