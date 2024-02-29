@@ -147,3 +147,117 @@ print(finalplot)
 pdf(file = "./EUR_colorcoded_HRJ_FS.pdf")
 print(finalplot)
 dev.off()
+
+
+################## Mae equidistant bins?
+Bin1 <- 0.1
+Bin2 <- 0.2
+Bin3 <- 0.3
+Bin4 <- 0.4
+Bin5 <- 0.5
+Bin6 <- 0.6
+Bin7 <- 0.7
+Bin8 <- 0.8
+
+## Make a label for this
+all_countries_info[Ratio < Bin1 & Ratio >= 0, bin := Bin1]
+all_countries_info[Ratio < Bin2 & Ratio >= Bin1, bin := Bin2]
+all_countries_info[Ratio < Bin3 & Ratio >= Bin2, bin := Bin3]
+all_countries_info[Ratio < Bin4 & Ratio >= Bin3, bin := Bin4]
+all_countries_info[Ratio < Bin5 & Ratio >= Bin4, bin := Bin5]
+all_countries_info[Ratio < Bin6 & Ratio >= Bin5, bin := Bin6]
+all_countries_info[Ratio < Bin7 & Ratio >= Bin6, bin := Bin7]
+all_countries_info[Ratio < Bin8 & Ratio >= Bin7, bin := Bin8]
+
+all_countries_info[bin == Bin1, name := "< 10%"]
+all_countries_info[bin == Bin2, name := "< 20%"]
+all_countries_info[bin == Bin3, name := "< 30%"]
+all_countries_info[bin == Bin4, name := "< 40%"]
+all_countries_info[bin == Bin5, name := "< 50%"]
+all_countries_info[bin == Bin6, name := "< 60%"]
+all_countries_info[bin == Bin7, name := "< 70%"]
+all_countries_info[bin == Bin8, name := "< 80%"]
+
+
+SHP_29 <- SHP_0 %>% 
+  select(geo = NUTS_ID, geometry) %>% 
+  inner_join(all_countries_info, by = "geo") %>% 
+  arrange(geo) %>% 
+  st_as_sf()
+#######################################
+finalplot <- SHP_29 %>%
+  ggplot(aes(fill = name)) + 
+  geom_sf() + 
+  scale_fill_viridis_d("% of popn") +
+  scale_x_continuous(limits = c(-22, 38)) + 
+  scale_y_continuous(limits = c(35, 66)) + 
+  labs(
+    title = "Percentage of population with genetic data (WGS or array)",
+    caption = "Source data: 1+MG + manual curation by Federica Santonastaso"
+  ) +
+  
+  theme_void()  + 
+  theme(
+    legend.position = c(0.93, 0.5)
+  )
+print(finalplot)
+
+### Then we don't really distinguish between countries well. We have a lot at the low end and 1-2 at the high end.
+#######################################
+
+pdf(file = "./EUR_colorcoded_HRJ_FS_equidistant.pdf")
+print(finalplot)
+dev.off()
+
+################## More at the top and bottom
+
+Bin1 <- 0.001
+Bin2 <- 0.01
+Bin3 <- 0.1
+Bin4 <- 0.2
+Bin5 <- 0.8
+
+## Make a label for this
+all_countries_info[Ratio < Bin1 & Ratio >= 0, bin := Bin1]
+all_countries_info[Ratio < Bin2 & Ratio >= Bin1, bin := Bin2]
+all_countries_info[Ratio < Bin3 & Ratio >= Bin2, bin := Bin3]
+all_countries_info[Ratio < Bin4 & Ratio >= Bin3, bin := Bin4]
+all_countries_info[Ratio < Bin5 & Ratio >= Bin4, bin := Bin5]
+
+all_countries_info[bin == Bin1, name := "< 0.1%"]
+all_countries_info[bin == Bin2, name := "< 1%"]
+all_countries_info[bin == Bin3, name := "< 10%"]
+all_countries_info[bin == Bin4, name := "< 20%"]
+all_countries_info[bin == Bin5, name := "< 80%"]
+
+SHP_29 <- SHP_0 %>% 
+  select(geo = NUTS_ID, geometry) %>% 
+  inner_join(all_countries_info, by = "geo") %>% 
+  arrange(geo) %>% 
+  st_as_sf()
+#######################################
+finalplot <- SHP_29 %>%
+  ggplot(aes(fill = name)) + 
+  geom_sf() + 
+  scale_fill_viridis_d("% of popn") +
+  scale_x_continuous(limits = c(-22, 38)) + 
+  scale_y_continuous(limits = c(35, 66)) + 
+  labs(
+    title = "Percentage of population with genetic data (WGS or array)",
+    caption = "Source data: 1+MG + manual curation by Federica Santonastaso\nPlotted by Helen Ray-Jones"
+  ) +
+  
+  theme_void()  + 
+  theme(
+    legend.position = c(0.93, 0.5)
+  )
+print(finalplot)
+
+######################################
+## This one looks a lot better
+
+pdf(file = "./EUR_colorcoded_HRJ_FS_manualBins.pdf")
+print(finalplot)
+dev.off()
+
+######################################
