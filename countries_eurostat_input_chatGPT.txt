@@ -1,0 +1,63 @@
+geo	Country	Study / Consortium	Approximate WGS Samples	Notes
+AL	Albania	None found	0	
+AT	Austria			
+BY	Belarus	None found	0	
+BE	Belgium	BeSolveRD (rare disease)	~400	Completed WGS cohort
+BE	Belgium	BelPHG_21 Pilot	~100	Pilot national WGS program
+BA	Bosnia & Herzegovina	None found	0	
+BG	Bulgaria	PG23-BG	~100	Smaller scale local cohorts
+HR	Croatia	100001 Dalmatians Croatian Biobank	"~1,000"	
+CZ	Czechia	ACGT (Analysis of CzechGenomes for Theranostics)	~600	
+CZ	Czechia	ENIGMA / NCMG	~600	Overlapping centers
+DK	Denmark	Danish Blood Donor Study (DBDS)	"~50,000"	
+DK	Denmark	GenomeDenmark	"~2,000"	
+EE	Estonia	Estonian Biobank	~3000	"~3000 confirmed, 10000 planned"
+FI	Finland	FinnGen	"~15,000"	
+FI	Finland	"THL Biobank collections (FINRISK, Health2000/2011)"	"~7,000"	Includes FinHealth 2017
+FR	France	POPGEN	"~2,000"	Population Genomic Diversity of France
+FR	France	SU.VI.MAX	"~1,000"	Nutritional epidemiology
+FR	France	3C Study	"~1,000"	Aging cohort
+FR	France	FranceGenRef (FGR)	"~1,000"	Reference genomes
+DK	Germany	German National Cohort (NAKO)	"~20,000"	
+DE	Germany	"LIFE studies (LIFE-Heart, LIFE-Adult)"	"~5,000"	Adult cohorts
+DE	Germany	DKFZ/NCT MASTER	"~3,000"	Cancer genomes
+DE	Germany	PROGRESS-CAP	"~2,000"	Cardiovascular project
+EL	Greece	HELIC-MANOLIS	~800	Crete island cohort
+EL	Greece	HELIC-Pomak	~400	Greek Pomak minority cohort
+EL	Greece	HYDRIA	~300	Aging research
+HU	Hungary	University of Debrecen Rare Disease genomes	~300	
+IS	Iceland	deCODE Genetics	"~15,000"	
+IE	Ireland	Irish Kidney Gene Project	~500	
+IT	Italy	Moli-sani	"~5,000"	Large population cohort
+IT	Italy	CHRIS	"~1,000"	South Tyrol cohort
+IT	Italy	INGI-FVG	"~1,000"	Friuli Venezia Giulia region
+IT	Italy	INCIPE	~500	Northeast Italy
+IT	Italy	"Sardinia (SardiNIA, Ogliastra)"	"~3,000"	Island population studies
+IT	Italy	NIG (Network for Italian Genomes)	"~3,000"	National Italian Genome project
+LV	Latvia	LGDB (Latvian Genome Database)	~150	
+LV	Latvia	LITGEN	75	25 trios high-coverage WGS
+LT	Lithuania	LITGEN	75	High coverage trio-based study
+MT	Malta	Single Cell Sequencing of Maltese beta thalassaemia	~18	Small WGS cohort
+MD	Moldova	None found	0	
+NL	Netherlands	Rotterdam Study	"~6,000"	
+NL	Netherlands	LifeLines Cohort Study	"~6,000"	
+NL	Netherlands	Twin Register	"~2,000"	
+NL	Netherlands	Project MinE NL	"~1,000"	ALS research cohort
+NO	Norway	HUNT Study (subset with WGS)	~2201	"Large genotyped cohort (~229,000) with subset WGS"
+PL	Poland	International Genome Project datasets	~500	Smaller WGS datasets
+PT	Portugal	Biobanco-iMM	~600	
+PT	Portugal	Genome Medicine - iBiMED	~400	
+RO	Romania			
+SK	Slovakia			
+SI	Slovenia	Rare Disease Undiagnosed Patients Ð UMC Ljubljana	~30	Clinical diagnostic use; high-coverage WGS
+ES	Spain	Collaborative Spanish Variability Server (CSVS)	"~2,000+"	Mixed WGS/exome; WGS-only unclear
+SE	Sweden	SweGen	"~5,000"	Population reference cohort
+SE	Sweden	Rare Disease Sweden	"~1,000"	Disease-focused WGS
+SE	Sweden	Swedegene-WGS	"~1,000"	
+CH	Switzerland	Inherited Retinal Diseases (UZH)	66	Confirmed clinical WGS PubMedMDPI
+CH	Switzerland	GECCOS / BISKIDS childhood cancer biobank	0	WGS planned but no counts PubMed
+CH	Switzerland	Lausanne Biobank pilot	0	Initial genome only
+UK	United Kingdom	UK Biobank	"~200,000"	
+UK	United Kingdom	UK10K Twins	"~4,000"	
+UK	United Kingdom	Personal Genome Project UK	"~1,000"	
+UA	Ukraine	Diversity in Ukraine (Science 2021 study)	"~1,200"	Recent large WGS study
